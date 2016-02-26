@@ -1,31 +1,3 @@
-// Phonegap Functions
-var app = {
-    initialize: function() {
-        this.bindEvents();
-    },
-    bindEvents: function() {
-        document.addEventListener('deviceready', this.onDeviceReady, false);
-    },
-    onDeviceReady: function() {
-        app.receivedEvent('deviceready');
-    },
-    receivedEvent: function(id) {
-        var parentElement = document.getElementById(id);
-        var listeningElement = parentElement.querySelector('.listening');
-        var receivedElement = parentElement.querySelector('.received');
-
-        listeningElement.setAttribute('style', 'display:none;');
-        receivedElement.setAttribute('style', 'display:block;');
-
-        console.log('Received Event: ' + id);
-    }
-};
-
-
-
-
-
-// Main Functions
 // localStorage IP Storage
 if(localStorage.getItem("ipAddress") == null) {
     localStorage.setItem("ipAddress","http://192.168.1.134/miato-brick/Server-APIs/");
@@ -37,7 +9,7 @@ $("#ipText").on("input",function(){
     localStorage.setItem("ipAddress",ip);
 });
 
-
+// Task Handling
 $("#tasks").html("loading...");
 $.getJSON(ip+"print2.php").done(function(data){
     arraylen = data.length;
