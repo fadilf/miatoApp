@@ -2,6 +2,10 @@
     font-family: ModernSans;
     src: url(ModernSans.woff);
 }
+body {
+    margin: 0;
+    padding: 0;
+}
 #new {
     font-size: 2em;
     border-radius: 0%;
@@ -44,7 +48,7 @@ h1 {
     display: inline-block;
     border-radius: 5px;
     border: solid 1px #bbb;
-    width: 350px;
+    width: calc(100% - 86px);
     padding: 5px;
     font-size: 1em;
     color: #777;
@@ -64,11 +68,7 @@ h1 {
     background: #eee;
     transition: .1s;
 }
-@media (max-width: 451px) {
-    #ipText {
-        width: calc(100% - 86px);
-    }
-}
-#form {
-    text-align: center;
+#container {
+    display: block;
+    width: 450px;
 }

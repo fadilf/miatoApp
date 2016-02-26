@@ -9,17 +9,14 @@
         <title>Miato App</title>
     </head>
     <body>
-        <h1>Miato App</h1>
-        <div id="form">
+        <div id="container">
+            <h1>Miato App</h1>
             <input type="url" id="ipText" />
             <button id="refresh" onclick="location.reload()">Refresh</button>
+            <ul id="tasks">
+            </ul>
         </div>
-        <ul id="tasks">
-        </ul>
         <script type="text/javascript" src="jquery.js"></script>
         <script type="text/javascript" src="script.js"></script>
-        <script type="text/javascript">
-            app.initialize();
-        </script>
     </body>
 </html>
