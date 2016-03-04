@@ -21,7 +21,6 @@ $.getJSON(ip+"print2.php").done(function(data){
             $("#tasks").append("<li class='task enabled'>"+(i+1)+"</li>");
         }
     }
-
     $(".task").click(function(){
         if($(this).hasClass("enabled")) {
             $(this).removeClass("enabled");
